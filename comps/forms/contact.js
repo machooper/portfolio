@@ -1,41 +1,38 @@
 import {useState} from "react"
-import Button from '../ui/comps/button'
+import Button from '../ui/button'
 export default function ContactForm() {
-  const [form, setForm] = useState({name: '', email: '', reason: '', message: '', sent: false, buttonText: "Send!", err:''})
+  const [form, setForm] = useState({name: '', email: '', message: '', sent: false, buttonText: "Send", err:''})
   function handleChange(e) {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setForm({
       ...form,
-      [name]: value,
+      [name]: value
     });
-  }
-  function resetForm() {
-    var fe = document.getElementsByClassName("fe");
-    setForm({
-      name: "",
-      email: "",
-      message: "",
-      reason: "",
-      sent: false,
-      buttonText: "Send!",
-      err: "",
-    });
-    document.getElementById("send").classList.remove("btnerror");
-    for (var i = 0; i < fe.length; i++) {
-      fe[i].classList.remove("fechange");
-    }
   }
   function sendForm(e) {
-    e.preventDefault();
-    var fe = document.getElementsByClassName("fe");
+    e.preventDefault()
+    var fe = document.getElementsByClassName("fe")
     for (var i = 0; i < fe.length; i++) {
-      fe[i].classList.add("fechange");
+      fe[i].classList.add("fechange")
     }
     setForm({
       ...form,
-      buttonText: "Sending...",
-    });
-    // Send Contact Form Logic Here
+      buttonText: "Sent",
+    })
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      }),
+    }).then((res) => {
+      console.log('Fetch: ', res)
+    })
   }
   return (
   <>
@@ -60,19 +57,6 @@ export default function ContactForm() {
           onChange={handleChange}
           required
         />
-        <select
-          id="reason"
-          name="reason"
-          className="fe"
-          value={form.reason}
-          onChange={handleChange}
-          required
-        >
-          <option value="title">Reason for contacting?</option>
-          <option value="work">Work with me</option>
-          <option value="questions">Any questions?</option>
-          <option value="other">Other</option>
-        </select>
         <textarea
           id="message"
           name="message"
@@ -83,22 +67,61 @@ export default function ContactForm() {
           required
         />
         <div style={{margin: '0 auto', width: '150'}}>
-          <Button text="Send!" url="/example" variant="primary"/>
+        <button type="submit" onClick={sendForm}>{form.buttonText}</button>
         </div>
       </form>
 
       <style jsx>{`
       form {
-         display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
       }
-      form input, #form select, #form textarea {
-        margin: .5rem 0;
-        border: 1px solid var(--grey);
+      form input, form textarea {
         border-radius: var(--radius);
+        width: 80vw;
+        height: 50px;
+        text-align: center;
+        border: 1px solid var(--grey);
+        margin: .5rem 0;
       }
       form textarea {
-        resize: none;
+          height: 150px;
+          resize: none;
+      }
+      form input, form textarea, form button {
+          font-family: inherit;
+          font-weight: 400;
+          color: var(--black);
+          letter-spacing: inherit;
+      }
+      form input:focus, form textarea:focus {
+        box-shadow: var(--shadow);
+      }
+      form ::placeholder {
+          color: var(--black);
+          opacity: 1;
+      }
+      form button {
+          min-width: 180px;
+          margin-top: 2rem;
+          background: transparent;
+          border: 1px solid var(--grey);
+          box-shadow: none;
+      }
+      form button:hover {
+          border: 1px solid var(--black);
+      }
+      @media(min-width: 760px) {
+          form input, form textarea {
+              width: 450px;
+          }
+      }
+      .fe {
+        box-shadow: none;
+      }
+      .fechange {
+        background: var(--success);
+        font-size: 0;
       }
       `}</style>
     </>
