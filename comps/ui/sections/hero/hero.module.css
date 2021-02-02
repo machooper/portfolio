@@ -1,0 +1,12 @@
+.container {
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+}
+.contents {
+    text-align: center;
+}
+.contents p {
+    margin: 1.5rem 0;
+}

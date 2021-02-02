@@ -1,0 +1,19 @@
+.container {
+    width: 280px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border: 1px solid var(--grey);
+    border-radius: var(--radius);
+}
+.container img {
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+.container p {
+    margin: 1rem 0;
+}
+.container h3, .container p, .container button {
+    margin-left: 1rem;
+}
