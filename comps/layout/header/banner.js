@@ -1,6 +1,5 @@
 import {useState} from 'react'
 import util from '../../../config/util.config'
-import css from './banner.module.css'
 export default function Banner() {
 	var [banner, setBanner] = useState(util.banner.visible)
 	function closeBanner() {
