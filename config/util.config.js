@@ -8,7 +8,7 @@ export default {
 	  }
 	],
 	banner: {
-	  visible: true,
+	  visible: false,
 	  message: 'A test message for the banner',
 	  color: 'var(--warn)'
 	}

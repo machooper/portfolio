@@ -20,6 +20,22 @@ export default function Banner() {
 						border-bottom: none;
 						color: inherit;
 					}
+					div {
+						width: 100vw;
+						height: 0px;
+						opacity: 0;
+						place-items: center;
+						position: absolute;
+						top: 0; left: 0;
+						animation: slideDown .3s forwards;
+					}
+					div a {
+						position: absolute;
+						right: 10px;
+					}
+					@keyframes slideDown {
+						100% {height: 30px;opacity:1;}
+					}
 			`}</style>
 		</div>
 	)

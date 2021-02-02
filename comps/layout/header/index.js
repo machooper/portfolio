@@ -1,5 +1,21 @@
-import {LogoLeft} from './variants'
+import Banner from './banner'
+import Logo from '../../ui/logo'
 export default function Header({variant, social}) {
 		return (
-			<LogoLeft social={social}/>
+		<>
+			<header>
+				<Banner/>
+				<Logo url="/"/>
+			</header>
+
+			<style jsx>{`
+			header {
+				width: 100vw;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 2rem;
+			}
+			`}</style>
+		</>
 )}

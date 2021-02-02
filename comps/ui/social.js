@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import seo from '../../../config/seo.config'
+import seo from '../../config/seo.config'
 export default function Social() {
 	return (
 	<ul className="flex justify-center">
