@@ -5,9 +5,9 @@ export default function Button({variant, text, url, bg, hov}) {
        <>
         <button href={url}>{text}</button>
         <style jsx>{`
-            button {background: transparent;}
+            button {background: var(--white); max-width: 100px; border: 1px solid var(--grey); box-shadow: none;}
             button:hover {
-                background: var(--primary);
+                border: 1px solid var(--black);
             }
         `}</style>
         </>
@@ -16,9 +16,9 @@ export default function Button({variant, text, url, bg, hov}) {
         <>
         <button href={url}>{text}</button>
         <style jsx>{`
-            button {background: var(--primary); border: 0;}
+            button {background: var(--primary); border: 0; max-width: 100px;color: var(--white);}
             button:hover {
-                background: var(--grey);
+                background: var(--secondary);
             }
         `}</style>
         </>

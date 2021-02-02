@@ -15,7 +15,7 @@ export default function Footer() {
 			justify-content: space-between;
 			align-items: center;
 			flex-shrink: 0;
-			padding: 0 2rem .4rem 2rem;
+			padding: 0 1rem .5rem 1rem;
 			margin-top: 2rem;
 		}
 		`}</style>

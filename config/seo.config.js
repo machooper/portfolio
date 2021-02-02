@@ -17,6 +17,10 @@ export default {
 		name: 'instagram',
 		user: 'machooper',
 		url: 'https://instagram.com/machooper'
+	  }, {
+		  name: 'github',
+		  user: 'machooper',
+		  url: 'https://github.com/machooper'
 	  }
 	]
 }

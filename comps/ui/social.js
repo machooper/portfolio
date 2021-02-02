@@ -2,7 +2,7 @@ import Link from 'next/link'
 import seo from '../../config/seo.config'
 export default function Social() {
 	return (
-	<ul className="flex justify-center">
+	<ul style={{display: 'flex'}}>
 		{seo.social.map((icon) => (
 			<li style={{margin: 5}}key={icon.name}>
 				<Link href={icon.url}>

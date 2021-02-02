@@ -1,7 +1,5 @@
-@import 'animation.css';
 @import 'reset.css';
 @import 'responsive.css';
-@import 'util.css';
 @import 'variables.css';
 
 html, body {
@@ -18,12 +16,33 @@ h1, h2, h3, h4, h5, h6 {font-family: var(--head); font-weight: var(--headWeight)
 h1 {font-size: 1.6rem;}
 a {text-decoration: none; color:var(--primary);}
 a:hover {text-decoration: underline;}
+p {max-width: 90vw;}
 button {
     padding: var(--btnpadding);
     border: var(--btnborder);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     transition: .4s ease;
+}
+button:hover {background: var(--secondary);}
+.container {
+    width: 100vw;
+    min-height: 82.2vh;
+    display: grid;
+    place-items: center;
+}
+.content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+.title {
+    text-align: center;
+    margin: 2rem;
+}
+.cta {
+    min-height: 20vh;
+    background: var(--quaternary);
 }
 @media(prefers-color-scheme: dark) {
     html, body {

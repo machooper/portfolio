@@ -6,7 +6,7 @@ export default {
 	  quaternary: '#a2f48e',
 	  black: '#1c1c1c',
 	  white: '#fff',
-	  grey: '#d3d3d3',
+	  grey: '#eaeaea',
 	  shade: 'rgba(0,0,0,0.3)',
 	  warn: '#FDDC5C',
 	  error: '#ff3961',
@@ -21,7 +21,7 @@ export default {
 	  lineHeight: '1.6'
 	},
 	buttons: {
-	  padding: '.35rem 1.2rem',
+	  padding: '.7rem 1rem',
 	  border: '1px solid var(--black)'
 	},
 	other: {

@@ -6,7 +6,7 @@ export default function Banner() {
 		setBanner(false)
 	}
 	return (
-		<div id={css.banner}>
+		<div>
 			<p>{util.banner.message}</p>
 			<a onClick={closeBanner}>&times;</a>
 		    <style jsx>{`
