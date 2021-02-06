@@ -8,6 +8,9 @@ export default function Blog() {
         </div>
 
         <style jsx>{`
+        .container {
+            margin-top: 2rem;
+        }
         h2, a {
             text-align: center;
             margin-bottom: -1rem;
