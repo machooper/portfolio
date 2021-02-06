@@ -23,6 +23,7 @@ button {
     box-shadow: var(--shadow);
     transition: .4s ease;
     min-width: 120px;
+    color: inherit;
 }
 button:hover {background: var(--secondary);}
 .container {
