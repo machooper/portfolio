@@ -15,7 +15,7 @@ export default {
 	typography: {
 	  head: '\'Maven Pro\', monospace',
 	  headWeight: '700', 
-	  body: '\'Montserrat\', monospace',
+	  body: '\'Montserrat\', sans-serif',
 	  bodyWeight: '400',
 	  size: '16px',
 	  lineHeight: '1.6'
