@@ -1,6 +1,5 @@
-@import 'reset.css';
-@import 'responsive.css';
 @import 'variables.css';
+@import 'reset.css';
 
 html, body {
     width: 100vw;
@@ -16,13 +15,14 @@ h1, h2, h3, h4, h5, h6 {font-family: var(--head); font-weight: var(--headWeight)
 h1 {font-size: 1.6rem;}
 a {text-decoration: none; color:var(--primary);}
 a:hover {text-decoration: underline;}
-p {max-width: 90vw;}
+p {max-width: 90vw; line-height: 1.6; margin: 1rem 0;}
 button {
     padding: var(--btnpadding);
     border: var(--btnborder);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     transition: .4s ease;
+    min-width: 120px;
 }
 button:hover {background: var(--secondary);}
 .container {
@@ -41,12 +41,34 @@ button:hover {background: var(--secondary);}
     margin: 2rem;
 }
 .cta {
-    min-height: 20vh;
-    background: var(--quaternary);
+    min-height: 20vh!important;
+    background: var(--success);
 }
 @media(prefers-color-scheme: dark) {
     html, body {
         color: var(--white);
         background: var(--black);
+    }
+}
+@media(min-width: 1020px) { 
+    p {
+        max-width: 70vw;
+        margin: .5rem 0;
+    }
+}
+@media(min-width: 1360px) {
+    html, body {
+        font-size: 20px;
+    }
+    button {
+        min-width: 140px;
+    }
+}
+@media(min-width: 1919px) {
+    html, body {
+        font-size: 24px;
+    }
+    button {
+        min-width: 160px;
     }
 }

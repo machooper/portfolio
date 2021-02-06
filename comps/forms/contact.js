@@ -1,5 +1,4 @@
 import {useState} from "react"
-import Button from '../ui/button'
 export default function ContactForm() {
   const [form, setForm] = useState({name: '', email: '', message: '', sent: false, buttonText: "Send", err:''})
   function handleChange(e) {
@@ -97,7 +96,7 @@ export default function ContactForm() {
       form input:focus, form textarea:focus {
         box-shadow: var(--shadow);
       }
-      form ::placeholder {
+      ::placeholder {
           color: var(--black);
           opacity: 1;
       }
@@ -110,19 +109,29 @@ export default function ContactForm() {
       }
       form button:hover {
           border: 1px solid var(--black);
-      }
+        }
+        .fe {
+          box-shadow: none;
+        }
+        .fechange {
+          background: var(--success);
+          font-size: 0;
+        }
       @media(min-width: 760px) {
           form input, form textarea {
               width: 450px;
+            }
           }
+      @media(min-width: 1110px) {
+        form {
+          padding-bottom: 5rem;
+        }
       }
-      .fe {
-        box-shadow: none;
-      }
-      .fechange {
-        background: var(--success);
-        font-size: 0;
-      }
+      @media(min-width: 1360px) {
+        form {
+          padding-bottom: 5rem;
+        }
+      }¡
       `}</style>
     </>
   )

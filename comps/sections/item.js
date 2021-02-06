@@ -48,6 +48,26 @@ export default function Item({url, title, body, dark}) {
         .item:hover h3, .item:hover p {
             opacity: 1;
         }
+        @media(min-width: 1020px) {
+            .item {
+                width: 300px;
+                height: 300px;
+                margin: 0 1rem;
+            }
+        }
+        @media(min-width: 790px) and (max-width: 805px) and (min-height: 590px) and (max-height: 605px) {
+            .item {
+                width: 300px;
+                height: 300px;
+                margin: 0 1rem;
+            }
+        }
+        @media(min-width: 1919px) {
+            .item {
+                width: 500px;
+                height: 500px;
+            }
+        }
         `}</style>
     </>
 )}

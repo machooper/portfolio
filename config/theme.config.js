@@ -15,17 +15,17 @@ export default {
 	typography: {
 	  head: '\'Maven Pro\', monospace',
 	  headWeight: '700', 
-	  body: '\'Maven Pro\', monospace',
+	  body: '\'Montserrat\', monospace',
 	  bodyWeight: '400',
 	  size: '16px',
 	  lineHeight: '1.6'
 	},
 	buttons: {
-	  padding: '.7rem 1rem',
+	  padding: '.8rem 1.8rem',
 	  border: '1px solid var(--black)'
 	},
 	other: {
 	  shadow: '1.5px 3px 6px var(--shade)',
-	  radius: '1.75rem'
+	  radius: '.6rem'
 	}
   }
