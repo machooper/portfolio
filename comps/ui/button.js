@@ -5,10 +5,12 @@ export default function Button({variant, text, url, bg, hov}) {
        <>
         <button href={url}>{text}</button>
         <style jsx>{`
-            button {background: var(--white); max-width: 100px; border: 1px solid var(--grey); box-shadow: none;}
+            button {background: var(--white); max-width: 100px; border: 1px solid var(--grey); box-shadow: none; color: inherit;}
             button:hover {
-                border: 1px solid var(--black);
+                border: 1px solid inherit;
             }
+            @media(prefers-color-scheme: dark) {
+                button {background: var(--black);}
         `}</style>
         </>
 )} else if (variant.includes('primary')) {
