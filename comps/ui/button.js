@@ -10,7 +10,8 @@ export default function Button({variant, text, url, bg, hov}) {
                 border: 1px solid inherit;
             }
             @media(prefers-color-scheme: dark) {
-                button {background: transparent;}
+                button {background: transparent; border: 1px solid var(--black);color: var(--black);}
+                
         `}</style>
         </>
 )} else if (variant.includes('primary')) {
