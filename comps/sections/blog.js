@@ -4,7 +4,7 @@ export default function Blog() {
     <>
         <div className="container cta">
             <h2>Read my blog posts</h2>
-            <a href="https://machooper9.medium.com" target="_blank" rel="noopener"></a><Button text="Click here" variant='ghost'/>
+            <Button text="Click here" variant='ghost' url="https://machooper9.medium.com"/>
         </div>
 
         <style jsx>{`
